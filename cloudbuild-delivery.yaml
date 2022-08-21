@@ -46,9 +46,6 @@ steps:
     git remote -v && \
     git status && \
     git push origin production
-  volumes:
-  - name: 'ssh'
-    path: /root/.ssh
     
 #    $(git log --format=%B -n 1 $COMMIT_SHA)" && \ 
 # [END cloudbuild-delivery]
