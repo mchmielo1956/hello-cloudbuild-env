@@ -45,7 +45,7 @@ steps:
     git commit -m "Manifest from commit $COMMIT_SHA
     Author: $(git log --format='%an <%ae>' -n 1 HEAD)"  && \
 #    $(git log --format=%B -n 1 $COMMIT_SHA)" && \
-    # Push the changes back to Cloud Source Repository    
+# Push the changes back to Cloud Source Repository    
     git remote -v && \
     git status && \
     git push origin production
