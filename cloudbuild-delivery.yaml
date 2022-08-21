@@ -43,7 +43,7 @@ steps:
     git checkout $COMMIT_SHA kubernetes.yaml && \
     # Commit the kubernetes.yaml file with a descriptive commit message
     git commit -m "Manifest from commit $COMMIT_SHA
-    Author: $(git log --format=%B -n 1 $COMMIT_SHA)" && \    
+    $(git log --format=%B -n 1 $COMMIT_SHA)" && \    
 #    Author: $(git log --format='%an <%ae>' -n 1 HEAD)"  && \
 # Push the changes back to Cloud Source Repository    
     git remote -v && \
