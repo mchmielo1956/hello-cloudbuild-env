@@ -42,10 +42,11 @@ steps:
     git fetch origin production && git checkout production && \
     git checkout $COMMIT_SHA kubernetes.yaml && \
     # Commit the kubernetes.yaml file with a descriptive commit message
-    git commit -m "Manifest from commit $COMMIT_SHA Author: $(git log --format='%an <%ae>' -n 1 HEAD)"  && \
+    git commit -m "Manifest from commit $COMMIT_SHA Author: $(git log --format=%B -n 1 $COMMIT_SHA)" && \
     git remote -v && \
     git status && \
     git push origin production
     
 #    $(git log --format=%B -n 1 $COMMIT_SHA)" && \ 
+#    git commit -m "Manifest from commit $COMMIT_SHA Author: $(git log --format='%an <%ae>' -n 1 HEAD)"  && \
 # [END cloudbuild-delivery]
